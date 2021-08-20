@@ -14,11 +14,16 @@ const useStyles = makeStyles((theme) => ({
     back: {
       backgroundColor: gren,
       color: background,
+      padding: 10
       
     },
+    radio: {
+      color: background,
+    },
     sidebar: {
-      width: '200px',
+      width: '250px',
       height: '150px',
+  
       // position: 'fixed',
     },
     btn: {
@@ -83,17 +88,17 @@ const Sidebar = () => {
             <RadioGroup value={type} onChange={handleChangeType}>
               <FormControlLabel
                 value="box"
-                control={<Radio color="default" className={classes.back}/>}
-                label="Коробки"
+                control={<Radio color="default" className={classes.radio} />}
+                label="Коробки"                
               />
               <FormControlLabel
                 value="item"
-                control={<Radio color="default" className={classes.back}/>}
+                control={<Radio color="default" className={classes.radio}/>}
                 label="Аксессураы"
               />
               <FormControlLabel
                 value="all"
-                control={<Radio color="default" className={classes.back}/>}
+                control={<Radio color="default" className={classes.radio}/>}
                 label="Все"
               />
             </RadioGroup>

@@ -29,13 +29,13 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const EditProduct = () => {
-    const {saveEditedProduct, details, getDetails} = useMain()
+    const {saveEditedProduct, details, getDetails, history} = useMain()
     const classes = useStyles()
     const {id} = useParams()
     const [product, setProduct] = useState({
         title: '',
         type: '',
-        image: '',
+        image: "",
         description: '',
         price: 0,
         
@@ -91,14 +91,13 @@ const EditProduct = () => {
                 value={product.price}
                 variant="outlined"
                 label="Price"
-                type="number"
-                onChange={handleInp}
+                onChange={(e)=>handleInp(e,product,setProduct)}
                 />
                 <Container>
                 <Button onClick={() => saveEditedProduct(product.id, product)}>
                     Save
                 </Button>
-                <Button>
+                <Button onClick={()=> history.push('/list')}>
                     Cancel
                 </Button>
                 </Container>

@@ -60,6 +60,7 @@ const ProductContextProvider = ({ children }) => {
     const saveEditedProduct = async(id, editedProduct) => {
         const data = await axios.patch(`${JSON_API_PRODUCTS}/${id}`, editedProduct)
         getProducts()
+        history.push('/list')
     }
 
  

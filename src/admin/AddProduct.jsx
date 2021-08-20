@@ -105,7 +105,7 @@ const [product, setProduct] = useState({
                 <Button onClick={() => saveProduct(product)}>
                     Save
                 </Button>
-                <Button>
+                <Button onClick={()=> history.push('/list')}>
                     Cancel
                 </Button>
                 </Container>

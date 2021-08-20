@@ -6,12 +6,17 @@ import { getCurrentPage } from '../../consts/functions';
 import { Pagination } from '@material-ui/lab';
 import Sidebar from '../header/Sidebar';
 import { makeStyles } from '@material-ui/core/styles';
+import Header1 from '../header/Header1';
 
 
 const useStyles = makeStyles((theme) => ({
     container: {
         display: 'flex'
     },
+    side: {
+        width: 280
+    }, 
+
 }))
 
 const ProductList = () => {
@@ -32,9 +37,10 @@ const ProductList = () => {
     
     return (
         <Grid container >
+            <Header1/>
             <Container className={classes.container}>
 
-            <Grid>
+            <Grid calssName={classes.side}>
                 <Sidebar/>
             </Grid>
         <Grid container justify="space-evenly">

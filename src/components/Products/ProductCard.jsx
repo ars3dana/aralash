@@ -6,9 +6,11 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
+import StarOutlineRoundedIcon from '@material-ui/icons/StarOutlineRounded';
 import Typography from '@material-ui/core/Typography';
 import { useMain } from '../../contexts/ProductContext';
 import { NavLink } from 'react-router-dom';
+import { IconButton } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -19,6 +21,10 @@ const useStyles = makeStyles({
   media: {
     height: 140,
   },
+  content: {
+    height: 35,
+    overflow: 'hidden'
+  }
 });
 const ProductCard = ({ item }) => {
     const classes = useStyles();
@@ -37,9 +43,12 @@ const ProductCard = ({ item }) => {
             <Typography gutterBottom variant="h5" component="h2">
              {item.title}
             </Typography>
+            <div className={classes.content}>
             <Typography variant="body2" color="textSecondary" component="p">
               {item.description}
             </Typography>
+
+            </div>
           </CardContent>
         </CardActionArea>
         <CardActions>
@@ -53,6 +62,9 @@ const ProductCard = ({ item }) => {
           <Button onClick={() => history.push(`/edit/${item.id}`)} size="small" color="primary">
            Edit
           </Button>
+      <IconButton>
+        <StarOutlineRoundedIcon/>
+      </IconButton>
         </CardActions>
       </Card>
     );

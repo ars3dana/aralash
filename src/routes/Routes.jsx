@@ -17,7 +17,6 @@ const Routes = () => {
         <AuthContextProvider>
         <BrowserRouter>
         <ProductContextProvider>
-         <Header/>
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/list" component={ProductList}/>
