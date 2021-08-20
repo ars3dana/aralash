@@ -1,0 +1,77 @@
+{
+  "products": [
+    {
+      "title": "dsadd",
+      "description": "sadsdasd",
+      "type": "asdasdasd",
+      "image": "asdsada",
+      "price": 221,
+      "id": 1
+    },
+    {
+      "title": "asdasd",
+      "description": "sdasds",
+      "type": "dasdsad",
+      "image": "asd",
+      "price": 2,
+      "id": 2
+    },
+    {
+      "title": "dsadd",
+      "description": "sadsdasd",
+      "type": "asdasdasd",
+      "image": "asdsada",
+      "price": 221,
+      "id": 1
+    },{
+      "title": "dsadd",
+      "description": "sadsdasd",
+      "type": "asdasdasd",
+      "image": "asdsada",
+      "price": 221,
+      "id": 1
+    },{
+      "title": "dsadd",
+      "description": "sadsdasd",
+      "type": "asdasdasd",
+      "image": "asdsada",
+      "price": 221,
+      "id": 1
+    },{
+      "title": "dsadd",
+      "description": "sadsdasd",
+      "type": "asdasdasd",
+      "image": "asdsada",
+      "price": 221,
+      "id": 1
+    },{
+      "title": "dsadd",
+      "description": "sadsdasd",
+      "type": "asdasdasd",
+      "image": "asdsada",
+      "price": 221,
+      "id": 1
+    },{
+      "title": "dsadd",
+      "description": "sadsdasd",
+      "type": "asdasdasd",
+      "image": "asdsada",
+      "price": 221,
+      "id": 1
+    },{
+      "title": "dsadd",
+      "description": "sadsdasd",
+      "type": "asdasdasd",
+      "image": "asdsada",
+      "price": 221,
+      "id": 1
+    },{
+      "title": "dsadd",
+      "description": "sadsdasd",
+      "type": "asdasdasd",
+      "image": "asdsada",
+      "price": 221,
+      "id": 1
+    }
+  ]
+}
