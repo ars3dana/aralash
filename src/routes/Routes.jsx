@@ -13,6 +13,7 @@ import ProductContextProvider from '../contexts/ProductContext';
 import Signup from '../Auth/Signup';
 import Cart from '../components/Cart/Cart';
 import Creditcard from '../components/Cart/CreditCard/CreditCard';
+import FavoriteProducts from '../components/Products/FavoriteProducts';
 
 const Routes = () => {
     return (
@@ -30,6 +31,7 @@ const Routes = () => {
                 <Route exact path='/signup' component={Signup}/>
                 <Route exact path='/login' component={Login}/>
                 <Route exact path='/forgot-password' component={ForgotPassword}/>
+                <Route exact path="/favorites" component={FavoriteProducts}/>
             </Switch>
         </ProductContextProvider>
         </BrowserRouter>

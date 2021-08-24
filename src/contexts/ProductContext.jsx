@@ -47,7 +47,6 @@ const ProductContextProvider = ({ children }) => {
         type: ACTIONS.GET_PRODUCTS,
         payload: data,
         });
-
     }
 
     const addProduct = async (product) => {

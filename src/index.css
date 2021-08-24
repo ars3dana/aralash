@@ -4,11 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
 }
 body {
-    background-color: #DADED4 !important;
+    background-color: #133C3A !important;
+    
 }
+
 .MuiButton-root:hover {
     text-decoration: none;
     /* background-color: #fff !important; */
@@ -19,5 +21,20 @@ body {
 }
 .MuiPaginationItem-page.Mui-selected {
     background-color: rgba(57, 96, 61,0.8) !important;
-    color: #DADED4 !important;
+    color: #FFB236 !important;
+}
+.MuiPaginationItem-root {
+    color: #FFB236 !important;
+    height: 32px;
+    margin: 0 3px;
+    padding: 0 6px;
+    font-size: 0.875rem;
+    min-width: 32px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    border-radius: 16px;
+    letter-spacing: 0.01071em;
 }

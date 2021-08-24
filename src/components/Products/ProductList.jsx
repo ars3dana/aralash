@@ -14,9 +14,12 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex'
     },
     side: {
-        width: 280
+        width: 280,
+        marginTop: 200 
     }, 
-
+    list: {
+        paddingTop: 60  
+    }
 }))
 
 const ProductList = () => {
@@ -43,7 +46,7 @@ const ProductList = () => {
             <Grid calssName={classes.side}>
                 <Sidebar/>
             </Grid>
-        <Grid container justify="space-evenly">
+        <Grid container justify="space-evenly" className={classes.list}>
             {productsData ? (productsData.map((item) => (
                 <ProductCard item={item}/>
             ))) : (

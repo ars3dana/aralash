@@ -13,30 +13,26 @@ import { NavLink } from 'react-router-dom';
 import { IconButton } from '@material-ui/core';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 import { useEffect } from 'react';
-import './ProductCard.css'
-import Flippy, { FrontSide, BackSide } from 'react-flippy';
-import { text } from '../../consts/colorConsts';
+
 
 const useStyles = makeStyles({
+  root: {
+    width: 280,
+    margin: 10,
+    height: 300
+  },
   media: {
-    height: 170,
-    width: 270
-  },
-  card: {
-    backgroundColor: '#FFB236'
-  },
-  back: {
-    color: text,
-    backgroundColor: '#07161F'
+    height: 140,
   },
   content: {
-    display: 'flex',
-    justifyContent: 'center'
+    height: 35,
+    overflow: 'hidden'
   }
 });
-const ProductCard = ({ item }) => {
+const FavoritesCard = ({ item }) => {
+console.log(item)
     const classes = useStyles();
-    const { deleteProduct,history,addFavorite,favorites, getFavorites,addProductToCart, cart, getCart } = useMain()
+    const { addFavorite,favorites, getFavorites,addProductToCart, cart, getCart } = useMain()
     useEffect(() => {
       getFavorites()
     },[])
@@ -56,43 +52,27 @@ const ProductCard = ({ item }) => {
       }
     }
     return (
-      <Flippy
-    flipOnHover={false} // default false
-    flipOnClick={true} // default false
-    flipDirection="horizontal" // horizontal or vertical
-    style={{ width: '300px', height: '250px', margin: '10px' }} /// these are optional style, it is not necessary
-  >
-    <FrontSide
-      className={classes.card}
-    >
-       <CardActionArea>
+      <Card className={classes.root}>
+        <CardActionArea>
             <NavLink to={`/details/${item.id}`}>
           <CardMedia
             className={classes.media}
             image={item.image}
           />
             </NavLink>
-          <CardContent className={classes.content}>
+          <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
              {item.title}
             </Typography>
-            
+            <div className={classes.content}>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {item.description}
+            </Typography>
+
+            </div>
           </CardContent>
         </CardActionArea>
-    </FrontSide>
-    <BackSide
-    className={classes.back}>
-      <CardActions>
-          <Button 
-          size="small" 
-          color="primary"
-          onClick={() => deleteProduct(item.id)}
-          >
-            Delete
-          </Button>
-          <Button onClick={() => history.push(`/edit/${item.id}`)} size="small" color="primary">
-           Edit
-          </Button>
+        <CardActions>
       <IconButton color={checkFavorites(item.id)} onClick={()=> addFavorite(item)}>
         <StarOutlineRoundedIcon/>
       </IconButton>
@@ -100,9 +80,7 @@ const ProductCard = ({ item }) => {
         <AddShoppingCartIcon />
       </IconButton>
         </CardActions>
-    </BackSide>
-  </Flippy>
+      </Card>
     );
 };
-
-export default ProductCard;
+export default FavoritesCard;

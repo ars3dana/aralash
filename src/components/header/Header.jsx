@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { text } from '../../consts/colorConsts';
+import { header, text } from '../../consts/colorConsts';
 import { Button, Grid } from '@material-ui/core';
 import { useMain } from '../../contexts/ProductContext';
 
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     mainBtn: {
         width: '130px',
         height: '40px',
-        border: '3px solid #3C403D',
+        border: '3px solid #FE7C02',
         color: text,
     },
     text: {
@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => ({
        
     },
     back: {
-        backgroundColor: 'transparent'
+        backgroundColor: header,
+        color: text 
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -91,16 +92,18 @@ const Header = () => {
             </IconButton>
           <div className={classes.grow} />
           <Grid container className={classes.buttons} justify="space-between">            
-          <Button onClick={() => history.push('/list')}>
+          <Button className={classes.text} onClick={() => history.push('/list')}>
               Collection
           </Button>            
-          <Button onClick={() => history.push('/add')}>
-              Add collection
-          </Button>
-          <Button>
-              Main
+          <Button className={classes.text}  onClick={() => history.push('/cart')}>
+              CART
           </Button>
           <Button 
+         onClick={()=> history.push('/favorites')}
+         className={classes.text}>
+             favorites
+          </Button>
+          <Button className={classes.text} 
           onClick={()=> history.push('/login')}
           className={classes.mainBtn}>
               PROFILE

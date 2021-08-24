@@ -1,0 +1,9 @@
+.root{
+    border-radius: 1px!important;
+background: #FFB236!important;
+box-shadow:   inset 11px 11px 22px #d1922c,
+inset -11px -11px 22px #ffd240  !important;
+    margin: 10px!important;
+    height: 300px!important;
+    width: 300px !important;
+}

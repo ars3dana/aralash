@@ -56,7 +56,7 @@ const Coments = () => {
     // console.log(dar)
     return (
         <>
-        <form type="submit"noValidate autoComplete='off'>
+       
         <Grid container justify="center">
             <Grid className={classes.comentWindow}>
             {productDetails.comments ? (productDetails.comments.map((item) => (
@@ -71,7 +71,7 @@ const Coments = () => {
             <TextField value={value}className={classes.input} onChange={handleInp}/>
             <Button onClick={() => addComent( product.id)}>Send</Button>
         </Grid>
-            </form>
+          
         </>
     );
 };

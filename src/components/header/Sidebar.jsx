@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { useState } from "react";
 import { useMain } from '../../contexts/ProductContext';
 import { Radio, FormControl, FormLabel, Grid, Paper, RadioGroup, FormControlLabel, Button, Slider } from "@material-ui/core";
-import { background,gren } from '../../consts/colorConsts';
+import { background,text } from '../../consts/colorConsts';
 const useStyles = makeStyles((theme) => ({
     paper: {
       width: '90px',
@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
       
     },
     back: {
-      backgroundColor: gren,
-      color: background,
+      backgroundColor: '#fff',
+      color: text,
       padding: 10
       
     },
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     sidebar: {
       width: '250px',
       height: '150px',
-  
+      marginTop: 70
       // position: 'fixed',
     },
     btn: {
