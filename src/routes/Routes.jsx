@@ -11,6 +11,8 @@ import ProductList from '../components/Products/ProductList';
 import AuthContextProvider from '../contexts/AuthContext';
 import ProductContextProvider from '../contexts/ProductContext';
 import Signup from '../Auth/Signup';
+import Cart from '../components/Cart/Cart';
+import Creditcard from '../components/Cart/CreditCard/CreditCard';
 
 const Routes = () => {
     return (
@@ -21,6 +23,8 @@ const Routes = () => {
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/list" component={ProductList}/>
                 <Route exact path="/add" component={AddProduct}/>
+                <Route exact path="/cart" component={Cart}/>
+                <Route exact path="/pay" component={Creditcard}/>
                 <Route exact path="/edit/:id" component={EditProduct}/>
                 <Route exact path="/details/:id" component={ProductDetail}/> 
                 <Route exact path='/signup' component={Signup}/>

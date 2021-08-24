@@ -37,7 +37,8 @@ const [product, setProduct] = useState({
     description: '',
     type: '',
     image: '',
-    price: 0
+    price: 0,
+    comments: []
 })
     const handleInp = (e) => {
             if( e.target.name == 'price'){

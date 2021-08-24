@@ -6,14 +6,39 @@
       "type": "asdasdasd",
       "image": "asdsada",
       "price": 500,
+      "comments": [
+        {
+          "comment": "dasd",
+          "user": "arsen@gmail.com"
+        },
+        {
+          "comment": "dasdasd",
+          "user": "arsen@gmail.com"
+        },
+        {
+          "comment": "Dron",
+          "user": "arsen@gmail.com"
+        }
+      ],
       "id": 1
     },
     {
       "title": "Adil",
-      "description": "Adil is great man . I see him when he go to the park and he love my favorite dish",
+      "description": "Adil is  efsepfw[keofkwe[if fwie mfoiwme ofimwe fmwe mfwem foimweofime woifmoiwe mfoiew moif mweoifm oweimf oweimfo weimfo weimfo wiemfo wemfo wiemf oweimfo wemf owemfowmeokmokmomeomw owefm owmefo wemof mweof mweofm weokfm woefkm weom owem owekfm weokfm eofkm  man . I see him when he go to the park and he love my favorite dish",
       "type": "human",
       "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxR-dePOunKxtZ1zdjUyqNP0Q",
       "price": 5000,
+      "like": 3,
+      "comments": [
+        {
+          "comment": "dasdd",
+          "user": "arsen@gmail.com"
+        },
+        {
+          "comment": "arsen",
+          "user": "arsen@gmail.com"
+        }
+      ],
       "id": 2
     },
     {
@@ -22,6 +47,7 @@
       "type": "asdasdasd",
       "image": "asdsada",
       "price": 221,
+      "comments": [],
       "id": 1
     },
     {
@@ -30,54 +56,7 @@
       "type": "asdasdasd",
       "image": "asdsada",
       "price": 221,
-      "id": 1
-    },
-    {
-      "title": "dsadd",
-      "description": "sadsdasd",
-      "type": "asdasdasd",
-      "image": "asdsada",
-      "price": 221,
-      "id": 1
-    },
-    {
-      "title": "dsadd",
-      "description": "sadsdasd",
-      "type": "asdasdasd",
-      "image": "asdsada",
-      "price": 221,
-      "id": 1
-    },
-    {
-      "title": "dsadd",
-      "description": "sadsdasd",
-      "type": "asdasdasd",
-      "image": "asdsada",
-      "price": 221,
-      "id": 1
-    },
-    {
-      "title": "dsadd",
-      "description": "sadsdasd",
-      "type": "asdasdasd",
-      "image": "asdsada",
-      "price": 221,
-      "id": 1
-    },
-    {
-      "title": "dsadd",
-      "description": "sadsdasd",
-      "type": "asdasdasd",
-      "image": "asdsada",
-      "price": 221,
-      "id": 1
-    },
-    {
-      "title": "dsadd",
-      "description": "sadsdasd",
-      "type": "asdasdasd",
-      "image": "asdsada",
-      "price": 221,
+      "comments": [],
       "id": 1
     }
   ]

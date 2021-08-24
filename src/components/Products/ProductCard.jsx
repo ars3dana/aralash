@@ -11,6 +11,9 @@ import Typography from '@material-ui/core/Typography';
 import { useMain } from '../../contexts/ProductContext';
 import { NavLink } from 'react-router-dom';
 import { IconButton } from '@material-ui/core';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
+import { useEffect } from 'react';
+
 
 const useStyles = makeStyles({
   root: {
@@ -28,8 +31,25 @@ const useStyles = makeStyles({
 });
 const ProductCard = ({ item }) => {
     const classes = useStyles();
-    const { deleteProduct,history } = useMain()
-    
+    const { deleteProduct,history,addFavorite,favorites, getFavorites,addProductToCart, cart, getCart } = useMain()
+    useEffect(() => {
+      getFavorites()
+    },[])
+    useEffect(() => {
+      getCart()
+    }, [])
+    const checkFavorites = (id) => {
+      if(favorites && favorites.products){
+        const foundItem = favorites?.products.find(product => product.item.id === id)
+        return foundItem ? 'secondary' : 'default'
+      }
+    }
+    const checkItemInCart = (id) => {
+      if(cart && cart.products){
+        const foundItem = cart?.products.find(product => product.item.id === id)
+        return foundItem ? 'secondary' : 'default'
+      }
+    }
     return (
       <Card className={classes.root}>
         <CardActionArea>
@@ -62,8 +82,11 @@ const ProductCard = ({ item }) => {
           <Button onClick={() => history.push(`/edit/${item.id}`)} size="small" color="primary">
            Edit
           </Button>
-      <IconButton>
+      <IconButton color={checkFavorites(item.id)} onClick={()=> addFavorite(item)}>
         <StarOutlineRoundedIcon/>
+      </IconButton>
+      <IconButton color={checkItemInCart(item.id)} onClick={() => addProductToCart(item)} aria-label="add to favorites">
+        <AddShoppingCartIcon />
       </IconButton>
         </CardActions>
       </Card>

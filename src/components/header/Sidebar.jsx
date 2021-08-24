@@ -39,7 +39,6 @@ const Sidebar = () => {
     
 
     function getType(history){
-      console.warn(history)
       const search = new URLSearchParams(history.location.search)
       return search.get('type')
     }
