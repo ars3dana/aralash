@@ -11,14 +11,17 @@ import Header1 from '../header/Header1';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        display: 'flex'
+        display: 'flex',
+        flexWrap:'wrap'
     },
     side: {
-        width: 280,
-        marginTop: 200 
+        width: 280, 
+        margin: '0 auto'
     }, 
     list: {
-        paddingTop: 60  
+        paddingTop: 60,
+        maxWidth: 970  
+
     }
 }))
 

@@ -5,10 +5,15 @@ const useStyles = makeStyles((theme) => ({
         width: 300,
         height: 49,
         border: '2px solid black',
-        marginBottom: 10
+        marginBottom: 10,
+        backgroundColor: '#fcc556',
+        color: '#000',
+        padding: 2
     },
     users: {
-        color: 'red'
+        color: '#000',
+        fontSize: 15,
+        fontWeight: 'bold'
     }
 }))
 const ComentsCard = ({item}) => {

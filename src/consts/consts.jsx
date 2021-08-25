@@ -5,4 +5,5 @@ export const ACTIONS = {
     GET_CART: "GET_CART"
 }
 export const JSON_API_PRODUCTS = "http://localhost:8000/products"
-export const PRODUCT_LIMIT = 6
+export const PRODUCT_LIMIT = 8
+export const admin = "arsen@gmail.com"

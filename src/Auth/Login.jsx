@@ -1,13 +1,17 @@
 import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { Link, useHistory } from "react-router-dom"
-import { Grid, makeStyles } from "@material-ui/core"
+import { Grid } from "@material-ui/core"
+import { makeStyles} from "@material-ui/core/styles"
+
 import { useAuth } from "../contexts/AuthContext"
 
 
 const useStyles = makeStyles((theme) => ({
-
-  
+  btn: {
+    background: "rgba( 255, 255, 255, 0.35 )",
+    color: '#000'
+  }
 }))
 
   const Login = () => {
@@ -51,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" ref={passwordRef} required />
             </Form.Group>
-            <Button disabled={loading}type="submit" >
+            <Button disabled={loading}type="submit" className={classes.btn}>
               Log In
             </Button>
           </Form>

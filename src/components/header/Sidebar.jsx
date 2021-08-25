@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
-
+import './Sidebar.css';
 import { useState } from "react";
 import { useMain } from '../../contexts/ProductContext';
 import { Radio, FormControl, FormLabel, Grid, Paper, RadioGroup, FormControlLabel, Button, Slider } from "@material-ui/core";
-import { background,text } from '../../consts/colorConsts';
+import { background,header,text } from '../../consts/colorConsts';
 const useStyles = makeStyles((theme) => ({
     paper: {
       width: '90px',
@@ -12,22 +12,23 @@ const useStyles = makeStyles((theme) => ({
       
     },
     back: {
-      backgroundColor: '#fff',
-      color: text,
-      padding: 10
+      background: "rgba( 255, 255, 255, 0.35 )",
+      padding: 10,
+      borderRadius: 10
       
     },
     radio: {
-      color: background,
+      
     },
     sidebar: {
       width: '250px',
-      height: '150px',
+      // height: '150px',
       marginTop: 70
       // position: 'fixed',
     },
     btn: {
-      backgroundColor: background
+      // backgroundColor: header,
+      // color: text
     }
   }));
 
@@ -86,19 +87,39 @@ const Sidebar = () => {
             <FormLabel component="legend"></FormLabel>
             <RadioGroup value={type} onChange={handleChangeType}>
               <FormControlLabel
-                value="box"
+                value="Women's Fashion"
                 control={<Radio color="default" className={classes.radio} />}
-                label="Коробки"                
+                label="Women's Fashion"                
               />
               <FormControlLabel
-                value="item"
+                value="Men's Fashion"
                 control={<Radio color="default" className={classes.radio}/>}
-                label="Аксессураы"
+                label="Men's Fashion"
+              />
+               <FormControlLabel
+                value="Computer,Office"
+                control={<Radio color="default" className={classes.radio}/>}
+                label="Computer,Office"
+              />
+               <FormControlLabel
+                value="Home & Pet"
+                control={<Radio color="default" className={classes.radio}/>}
+                label="Home & Pet"
+              />
+               <FormControlLabel
+                value="Beauty"
+                control={<Radio color="default" className={classes.radio}/>}
+                label="Beauty"
+              />
+               <FormControlLabel
+                value="Toys,Kids"
+                control={<Radio color="default" className={classes.radio}/>}
+                label="Toys,Kids"
               />
               <FormControlLabel
                 value="all"
                 control={<Radio color="default" className={classes.radio}/>}
-                label="Все"
+                label="All"
               />
             </RadioGroup>
           </FormControl>

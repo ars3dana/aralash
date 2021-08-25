@@ -11,9 +11,13 @@ const useStyles = makeStyles((theme) => ({
     comentWindow: {
         width: 600,
         height: 300,
-        border: 'solid 2px black',
+        border: 'solid 2px #FC9F03',
         padding: 10,
-        overflow: 'scroll'
+        overflow: 'scroll',
+        margin: '40px 0 5px 0'
+    },
+    btn: {
+        color:"#fcc556"
     },
     root: {
         display: 'flex',
@@ -22,13 +26,18 @@ const useStyles = makeStyles((theme) => ({
         },
       },
     input: {
-        width: 550
+        width: 550,
+        border: '2px solid #fcc556',
+        color: "#000",
+    
+        borderRadius: 15
+
     }
 }))
 const Coments = () => {
     const classes = useStyles()
     const {currentUser} = useAuth()
-    const { getProducts,productDetails, getDetails } = useMain()
+    const { getProducts,productDetails, getDetails,history } = useMain()
     const [value, setValue] = useState('')
     const {id} = useParams()
     const [product, setProduct] = useState('')
@@ -48,7 +57,7 @@ const Coments = () => {
         productDetails.comments.push(coment)
         setProduct(productDetails)
         const data = await axios.patch(`${JSON_API_PRODUCTS}/${id}`,product)
-        getProducts()
+        getProducts(history)
         setValue('')
     }
         
@@ -68,8 +77,8 @@ const Coments = () => {
               </div>
             )}
             </Grid>
-            <TextField value={value}className={classes.input} onChange={handleInp}/>
-            <Button onClick={() => addComent( product.id)}>Send</Button>
+            <input value={value} className={classes.input} onChange={handleInp}/>
+            <Button className={classes.btn} onClick={() => addComent( product.id)}>Send</Button>
         </Grid>
           
         </>

@@ -3,12 +3,19 @@ import React from 'react';
 import { useEffect } from 'react';
 import { text } from '../../consts/colorConsts';
 import { useMain } from '../../contexts/ProductContext';
+import Header from '../header/Header';
 import FavoritesCard from './FavoritesCard';
+import ProductCard from './ProductCard';
 
 const useStyles = makeStyles((theme) => ({
     window: {
         padding: 30,
-        color: text
+        color: text,
+        display: 'flex',
+        flexWrap: 'wrap'
+    },
+    cursor: {
+        cursor: 'pointer'
     }
 }))
 const FavoriteProducts = () => {
@@ -19,21 +26,24 @@ const FavoriteProducts = () => {
     },[])
     console.log(favorites)
     return (
+        <>
+        <Header/>
         <Grid container justify='center' className={classes.window}>
             <Typography variant="h3">
                 FAVORITES
             </Typography>
             <Grid container justify="space-evenly">
             {!favorites.products.length == 0 ? (favorites.products.map(item => (
-                <FavoritesCard item={item.item}/>
+                <ProductCard item={item.item}/>
             ))):(<Grid container justify="center" alignItems="center">
-                <Typography onClick={()=> history.push('/list')} variant="h2">
+                <Typography  className={classes.cursor}onClick={()=> history.push('/list')} variant="h2">
                 COLLECTION
             </Typography>
                 </Grid>
             ) }
             </Grid>
         </Grid>
+        </>
     );
 };
 

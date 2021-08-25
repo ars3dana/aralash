@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Container, makeStyles, Paper, TextField } from '@material-ui/core';
+import { Button, Container, makeStyles, MenuItem, Paper, Select, TextField } from '@material-ui/core';
 import { useMain } from '../contexts/ProductContext';
 import { useHistory } from 'react-router-dom';
 
@@ -80,13 +80,20 @@ const [product, setProduct] = useState({
                 label="Description"
                 onChange={handleInp}            
                 />
-                <TextField
+                <Select
                 className={classes.textfield}
                 name='type'
                 variant="outlined"
                 label="Type"
                 onChange={handleInp}
-                />
+                >
+                    <MenuItem name="type"value="Women's Fashion">Women's Fashion</MenuItem>
+                    <MenuItem name="type" value="Men's Fashion">Men's Fashion</MenuItem>
+                    <MenuItem name="type" value="Computer,Office">Computer,Office</MenuItem>
+                    <MenuItem name="type" value="Home & Pet">Home & Pet</MenuItem>
+                    <MenuItem name="type" value="Beauty">Beauty</MenuItem>
+                    <MenuItem name="type" value="Toys,Kids">Toys,Kids</MenuItem>
+                </Select>
                 <TextField
                 className={classes.textfield}
                 name='image'

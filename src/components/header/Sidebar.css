@@ -1,4 +1,4 @@
-.card{
+.side{
     background: rgba( 255, 255, 255, 0.35 ) !important;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 3.0px );
@@ -6,14 +6,3 @@
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-/* .content{
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-  }
-.desc {
-    height: 250px !important;
-    overflow: hidden !important;
-  } */

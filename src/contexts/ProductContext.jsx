@@ -67,7 +67,7 @@ const ProductContextProvider = ({ children }) => {
     const saveEditedProduct = async(id, editedProduct) => {
         const data = await axios.patch(`${JSON_API_PRODUCTS}/${id}`, editedProduct)
         getProducts()
-        history.push('/list')
+        history.push('/admin')
     }
     const addFavorite = (product) => {
         let favorites = JSON.parse(localStorage.getItem('favorites'));

@@ -11,20 +11,26 @@ import { useEffect } from 'react';
 import { Button, Grid, IconButton, Typography } from '@material-ui/core';
 import { useState } from 'react';
 import { useMain } from '../../contexts/ProductContext';
+import Header from '../header/Header';
+import { text } from '../../consts/colorConsts';
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 650,
+    maxWidth: 1400,
+    background: "rgba( 255, 255, 255, 0.35 )"
   },
   tableCellImg: {
     width: 50,
+    background: "rgba( 255, 255, 255, 0.35 )"
   },
   btn: {
     width:'100px',
-    height:'40px',
+    height:'60px',
     borderRadius: '7px',
-    color: 'black',
-    textDecoration: 'none'
+    color: '#000',
+    border: '2px solid #000',
+    textDecoration: 'none',
+    fontFamily: 'Poppins, sans-serif'
   },
   text: {
     textDecoration: 'none'
@@ -41,7 +47,7 @@ export default function Cart() {
   }, []);
 
   useEffect(() => {
-    setCount();
+    setCount(count);
   }, [cart]);
 
   const handleCountChange = (count, id) => {
@@ -53,6 +59,7 @@ export default function Cart() {
   }
   return (
     <>
+    <Header/>
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="caption table">
         <TableHead>
@@ -96,11 +103,9 @@ export default function Cart() {
         </TableBody>
       </Table>
       <Grid container justify="center">
-      <IconButton >
     <Button  
     onClick={buy}
-    className={classes.btn}>Купить</Button>
-      </IconButton>
+    className={classes.btn}>BUY</Button>
       </Grid>
     </TableContainer>
     </>

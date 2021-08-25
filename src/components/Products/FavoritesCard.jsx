@@ -19,7 +19,8 @@ const useStyles = makeStyles({
   root: {
     width: 280,
     margin: 10,
-    height: 300
+    height: 300,
+    background: "rgba( 255, 255, 255, 0.35 )"
   },
   media: {
     height: 140,
@@ -30,27 +31,10 @@ const useStyles = makeStyles({
   }
 });
 const FavoritesCard = ({ item }) => {
-console.log(item)
     const classes = useStyles();
-    const { addFavorite,favorites, getFavorites,addProductToCart, cart, getCart } = useMain()
-    useEffect(() => {
-      getFavorites()
-    },[])
-    useEffect(() => {
-      getCart()
-    }, [])
-    const checkFavorites = (id) => {
-      if(favorites && favorites.products){
-        const foundItem = favorites?.products.find(product => product.item.id === id)
-        return foundItem ? 'secondary' : 'default'
-      }
-    }
-    const checkItemInCart = (id) => {
-      if(cart && cart.products){
-        const foundItem = cart?.products.find(product => product.item.id === id)
-        return foundItem ? 'secondary' : 'default'
-      }
-    }
+    const { deleteProduct, history } = useMain()
+  
+    
     return (
       <Card className={classes.root}>
         <CardActionArea>
@@ -73,12 +57,16 @@ console.log(item)
           </CardContent>
         </CardActionArea>
         <CardActions>
-      <IconButton color={checkFavorites(item.id)} onClick={()=> addFavorite(item)}>
-        <StarOutlineRoundedIcon/>
-      </IconButton>
-      <IconButton color={checkItemInCart(item.id)} onClick={() => addProductToCart(item)} aria-label="add to favorites">
-        <AddShoppingCartIcon />
-      </IconButton>
+        <Button 
+          size="small" 
+          color="primary"
+          onClick={() => deleteProduct(item.id)}
+          >
+            Delete
+          </Button>
+          <Button onClick={() => history.push(`/edit/${item.id}`)} size="small" color="primary">
+           Edit
+          </Button>
         </CardActions>
       </Card>
     );

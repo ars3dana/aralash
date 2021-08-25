@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Container, makeStyles, Paper, TextField } from '@material-ui/core';
+import { Button, Container, makeStyles, MenuItem, Paper, Select, TextField } from '@material-ui/core';
 import { handleInp } from '../consts/functions';
 import { useMain } from '../contexts/ProductContext';
 import { useParams } from 'react-router-dom';
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const EditProduct = () => {
-    const {saveEditedProduct, details, getDetails, history} = useMain()
+    const {saveEditedProduct, productDetails, getDetails, history} = useMain()
     const classes = useStyles()
     const {id} = useParams()
     const [product, setProduct] = useState({
@@ -44,8 +44,8 @@ const EditProduct = () => {
         getDetails(id)
     },[])
     useEffect(() => {
-        setProduct(details)
-    }, [details])
+        setProduct(productDetails)
+    }, [productDetails])
 
     return (
         <div>
@@ -69,14 +69,20 @@ const EditProduct = () => {
                 label="Description"
                 onChange={(e)=> handleInp(e, product, setProduct)}            
                 />
-                <TextField
+                <Select
                 className={classes.textfield}
                 name='type'
-                value={product.type}
                 variant="outlined"
                 label="Type"
-                onChange={(e)=> handleInp(e, product, setProduct)}
-                />
+                onChange={handleInp}
+                >
+                    <MenuItem name="type"value="Women's Fashion">Women's Fashion</MenuItem>
+                    <MenuItem name="type" value="Men's Fashion">Men's Fashion</MenuItem>
+                    <MenuItem name="type" value="Computer,Office">Computer,Office</MenuItem>
+                    <MenuItem name="type" value="Home & Pet">Home & Pet</MenuItem>
+                    <MenuItem name="type" value="Beauty">Beauty</MenuItem>
+                    <MenuItem name="type" value="Toys,Kids">Toys,Kids</MenuItem>
+                </Select>
                 <TextField
                 className={classes.textfield}
                 name='image'
@@ -97,7 +103,7 @@ const EditProduct = () => {
                 <Button onClick={() => saveEditedProduct(product.id, product)}>
                     Save
                 </Button>
-                <Button onClick={()=> history.push('/list')}>
+                <Button onClick={()=> history.push('/admin')}>
                     Cancel
                 </Button>
                 </Container>

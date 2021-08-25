@@ -14,6 +14,9 @@ import Signup from '../Auth/Signup';
 import Cart from '../components/Cart/Cart';
 import Creditcard from '../components/Cart/CreditCard/CreditCard';
 import FavoriteProducts from '../components/Products/FavoriteProducts';
+import AdminPanel from '../admin/AdminPanel';
+import UserPanel from '../User/UserPanel';
+import UpdateProfile from '../Auth/ResetPasword';
 
 const Routes = () => {
     return (
@@ -32,6 +35,10 @@ const Routes = () => {
                 <Route exact path='/login' component={Login}/>
                 <Route exact path='/forgot-password' component={ForgotPassword}/>
                 <Route exact path="/favorites" component={FavoriteProducts}/>
+                <Route exact path="/admin" component={AdminPanel}/>
+                <Route exact path="/user" component={UserPanel}/>
+                <Route exact path="/reset" component={UpdateProfile}/>
+                
             </Switch>
         </ProductContextProvider>
         </BrowserRouter>
