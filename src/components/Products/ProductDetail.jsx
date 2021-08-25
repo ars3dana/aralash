@@ -77,6 +77,7 @@ const ProductDetail = () => {
     },[])
     return (
         <div>
+            
             <Header/>
             <Container className={classes.main}>
                 <Grid className={classes.media}>

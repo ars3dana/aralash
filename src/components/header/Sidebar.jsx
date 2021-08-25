@@ -131,8 +131,8 @@ const Sidebar = () => {
             aria-labelledby="discrete-slider"
             valueLabelDisplay="auto"
             className={classes.back}
-            min={0}
-            max={50}
+            min={100}
+            max={5000}
             />
             <Button 
             onClick={resetPrice} 

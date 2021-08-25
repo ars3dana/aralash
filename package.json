@@ -14,6 +14,8 @@
     "card-validator": "^8.1.1",
     "date-fns": "^2.23.0",
     "firebase": "^8.10.0",
+    "i": "^0.3.6",
+    "json-server": "^0.16.3",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.5",
     "react-credit-cards": "^0.8.3",
