@@ -1,11 +1,13 @@
 import { Grid,Button, makeStyles, Typography, Container, IconButton } from '@material-ui/core';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { useMain } from '../../contexts/ProductContext';
 import Coments from './Coments/Coments';
 import { text } from '../../consts/colorConsts';
 import Header from '../header/Header';
+import ProductCard from './ProductCard';
+
 
 const useStyles = makeStyles((theme) => ({
     main: {
@@ -15,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     img: {
         width: 500,
         height: 500,
-        border: '3px solid #000',
+        border: '3px solid #FAFAFA',
         
     },
     media: {
@@ -30,33 +32,49 @@ const useStyles = makeStyles((theme) => ({
        color: text
     },
     title: {
-        color: '#fcc556',
+        color: text,
         marginBottom: 50
     },
     buy: {
-        color: '#fcc556',
+        color: text,
         display: 'flex',
         margin: '20px 0',
         width: 200,
         justifyContent: 'space-between'
     },
     btn: {
-        border: '2px solid #fcc556',
-        color: '#fcc556'
+        border: '2px solid #FAFAFA',
+        color: text
     },
     recomend: {
-        height: 200
+        display: 'flex',
+        justifyContent: 'center',
+        flexWrap: 'wrap',
+        marginTop: 30
+        
     }
     
 }));
 const ProductDetail = () => {
     const classes = useStyles()
     const {id} = useParams()
-    const {productDetails, getDetails, getProducts, history} = useMain()
+    const [rec, setRec] = useState([])
+    const {productDetails, getDetails,productsData, getProducts, history} = useMain()
+    useEffect(() => {
+        getProducts()
+    }, [])
+    
+    const recomend = () => {
+        const recArr = productsData.filter((item) => item.type === productDetails.type)
+        setRec(productsData)
+    }
+    console.log(rec)
     useEffect(() => {
         getDetails(id)
     }, [])
-    
+    useEffect(() => {
+        recomend()
+    },[])
     return (
         <div>
             <Header/>
@@ -90,7 +108,9 @@ const ProductDetail = () => {
                 </Grid>
             </Container> 
             <Grid className={classes.recomend}>
-
+            {rec.map(item => (
+                <ProductCard item={item}/>
+            ))}
             </Grid>
 
         </div>

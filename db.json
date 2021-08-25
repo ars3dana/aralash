@@ -3,7 +3,7 @@
     {
       "title": "Adil",
       "description": "Adil is  efsepfw[keofkwe[if fwie mfoiwme ofimwe fmwe mfwem foimweofime woifmoiwe mfoiew moif mweoifm oweimf oweimfo weimfo weimfo wiemfo wemfo wiemf oweimfo wemf owemfowmeokmokmomeomw owefm owmefo wemof mweof mweofm weokfm woefkm weom owem owekfm weokfm eofkm  man . I see him when he go to the park and he love my favorite dish",
-      "type": "human",
+      "type": "Men's Fashion",
       "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxR-dePOunKxtZ1zdjUyqNP0Q",
       "price": 5000,
       "like": 3,
@@ -40,49 +40,58 @@
       "id": 2
     },
     {
-      "title": "ArsBro",
-      "description": "man",
-      "type": "dasd",
-      "image": "asdsada",
-      "price": 5000,
+      "title": "Мужская обувь",
+      "description": "вфвыфв",
+      "type": "Men's Fashion",
+      "image": "вфыв",
+      "price": 122,
       "comments": [],
       "id": 3
     },
     {
-      "title": "dsadd",
-      "description": "sadsdasd",
-      "type": "asdasdasd",
-      "image": "asdsada",
-      "price": 221,
+      "title": "Туфли мужские ",
+      "description": "выфвф",
+      "type": "Men's Fashion",
+      "image": "выфв",
+      "price": 21441,
       "comments": [],
       "id": 4
     },
     {
-      "title": "arsen",
-      "description": "arsad",
-      "type": "",
-      "image": "dasd",
-      "price": 212,
+      "title": "efefef",
+      "description": "awfaw",
+      "type": "Men's Fashion",
+      "image": "dawda",
+      "price": 12,
       "comments": [],
       "id": 5
     },
     {
-      "title": "arsadqwf",
-      "description": "dqwdqwd",
+      "title": "efefse",
+      "description": "efsefs",
       "type": "Men's Fashion",
-      "image": "dasdasd",
-      "price": 212,
+      "image": "dawdasd",
+      "price": 214,
       "comments": [],
       "id": 6
     },
     {
-      "title": "arsaew",
-      "description": "awfaw",
-      "type": "Beauty",
-      "image": "dasd",
-      "price": 212,
+      "title": "df3r3",
+      "description": "3e12e12",
+      "type": "Men's Fashion",
+      "image": "wdadawd",
+      "price": 2141,
       "comments": [],
       "id": 7
+    },
+    {
+      "title": "dawda",
+      "description": "sadasd",
+      "type": "Men's Fashion",
+      "image": "adsda",
+      "price": 120,
+      "comments": [],
+      "id": 8
     }
   ]
 }

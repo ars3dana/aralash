@@ -24,7 +24,6 @@ const FavoriteProducts = () => {
     useEffect(() => {
         getFavorites()
     },[])
-    console.log(favorites)
     return (
         <>
         <Header/>

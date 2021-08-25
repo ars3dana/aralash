@@ -5,13 +5,14 @@ const useStyles = makeStyles((theme) => ({
         width: 300,
         height: 49,
         border: '2px solid black',
+        borderRadius: 10,
         marginBottom: 10,
-        backgroundColor: '#fcc556',
+        // backgroundColor: '#fcc556',
         color: '#000',
         padding: 2
     },
     users: {
-        color: '#000',
+        color: '#212121',
         fontSize: 15,
         fontWeight: 'bold'
     }

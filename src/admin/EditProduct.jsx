@@ -74,7 +74,7 @@ const EditProduct = () => {
                 name='type'
                 variant="outlined"
                 label="Type"
-                onChange={handleInp}
+                onChange={(e) =>handleInp(e,product,setProduct)}
                 >
                     <MenuItem name="type"value="Women's Fashion">Women's Fashion</MenuItem>
                     <MenuItem name="type" value="Men's Fashion">Men's Fashion</MenuItem>

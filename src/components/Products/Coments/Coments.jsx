@@ -11,13 +11,16 @@ const useStyles = makeStyles((theme) => ({
     comentWindow: {
         width: 600,
         height: 300,
-        border: 'solid 2px #FC9F03',
+        // border: 'solid 2px #FC9F03',
+        borderRadius: 10,
+        background: 'rgba( 255, 255, 255, 0.35 )',
         padding: 10,
         overflow: 'scroll',
         margin: '40px 0 5px 0'
     },
     btn: {
-        color:"#fcc556"
+        color: "#FAFAFA",
+        border: '2px solid #FAFAFA'
     },
     root: {
         display: 'flex',
@@ -27,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
       },
     input: {
         width: 550,
-        border: '2px solid #fcc556',
+        border: '2px solid #FAFAFA',
         color: "#000",
     
         borderRadius: 15
